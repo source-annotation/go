@@ -9,7 +9,7 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 
 # Sched   
 
-并不是为了阅读整个 go src 源码，只是按需阅读。   
+按需阅读。   
 
 ------------- sync --------------
 
@@ -27,5 +27,10 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 ------------- atomic --------------
 
 - [ ] atomic.CompareAndSwap  
-- [ ] atomic.Load/Store   
+- [ ] atomic.Load/Store    
+
+
+------------- net --------------
+
+- [ ] [net.Conn.SetDeadline(r/w)](src/net/net_deadline_annotation.md)
  
