@@ -21,7 +21,8 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 - [ ] sync.Map 
 
 ------------- runtime --------------
-- [ ] runtime.GC 
+- [ ] runtime.GC()  
+- [ ] runtime.GOMAXPROCS()
 
 
 ------------- atomic --------------

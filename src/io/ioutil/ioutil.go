@@ -30,6 +30,7 @@ func readAll(r io.Reader, capacity int64) (b []byte, err error) {
 			panic(e)
 		}
 	}()
+	// 这个判断看起来像是防止溢出，如果int64(int(capacity))后还等于 capacity，说明 capacity 小于 int 的上限值，int(capactiy) 后不会溢出。
 	if int64(int(capacity)) == capacity {
 		buf.Grow(int(capacity))
 	}

@@ -228,6 +228,7 @@ func (p *noder) closeAnotherScope() {
 }
 
 // linkname records a //go:linkname directive.
+// compile direct 和 pragma 这两个词好像代表同一个东西，就是编译指示(or 编译指令)？
 type linkname struct {
 	pos    syntax.Pos
 	local  string
@@ -1567,7 +1568,7 @@ func (p *noder) pragma(pos syntax.Pos, blankLine bool, text string, old syntax.P
 		if len(f) == 3 {
 			target = f[2]
 		}
-		p.linknames = append(p.linknames, linkname{pos, f[1], target})
+		p.linknames = append(p.linknames, linkname{, f[1], target})
 
 	case strings.HasPrefix(text, "go:cgo_import_dynamic "):
 		// This is permitted for general use because Solaris
