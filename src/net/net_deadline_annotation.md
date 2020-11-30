@@ -22,7 +22,10 @@ func setDeadlineImpl(fd *FD, t time.Time, mode int) error {
         // 如果 t 是 0，那就说明没有 deadline!!!
     }
 
-    // fd 有 incref 和 decref 两个方法？TODO 去仔细看一下！！！ 
+    // fd 有 incref 和 decref 两个方法
+    // incref = increase reference 也就是增加 fd 引用计数 
+    // decref = decrease reference 也就是减少 fd 引用计数 
+    // 这2个对 fd 引用计数操作的方法，都是 spin + cas (乐观锁)
     if err := fd.incref(); err != nil {
         return err
     }
