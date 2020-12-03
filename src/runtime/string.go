@@ -8,6 +8,7 @@ import (
 	"internal/bytealg"
 	"runtime/internal/sys"
 	"unsafe"
+	"runtime"
 )
 
 // The constant is known to the compiler.

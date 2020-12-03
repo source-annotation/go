@@ -943,6 +943,8 @@ const gcAssistTimeSlack = 5000
 // assist by pre-paying for this many bytes of future allocations.
 const gcOverAssistWork = 64 << 10
 
+// TODO var work struct 是什么语法？
+// TODO lock-free 这里怎么用？
 var work struct {
 	full  lfstack          // lock-free list of full blocks workbuf
 	empty lfstack          // lock-free list of empty blocks workbuf

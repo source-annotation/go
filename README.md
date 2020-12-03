@@ -22,7 +22,8 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 
 ------------- runtime --------------
 - [ ] runtime.GC()  
-- [ ] runtime.GOMAXPROCS()
+- [ ] runtime.GOMAXPROCS()  
+- [ ] runtime.lfstack 
 
 
 ------------- atomic --------------
