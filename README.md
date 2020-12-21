@@ -10,11 +10,29 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 # Sched   
 
 按需阅读。   
+------------- builtin --------------   
+
+- [ ] make  
+- [ ] new  
+- [ ] len   
+- [ ] cap  
+- [ ] append   
+- [ ] panic   
+- [ ] defer   
+- [ ] recover  
+- [ ] copy  
+- [ ] delete  
+- [ ] print   
+
+------------- gc(go compiler) --------------    
+
+- [ ] [inline(内联)](notes/gc_inline.md) 
+- [ ] [typecheck(类型检查)](notes/gc_inline.md) 
 
 ------------- sync --------------
 
-- [x] [sync.Once](src/sync/once_annotation.md)   
-- [ ] [sync.Mutex](src/sync/mutex_annotation.md)  
+- [x] [sync.Once](notes/once_annotation.md)   
+- [ ] [sync.Mutex](notes/mutex_annotation.md)  
 - [ ] sync.RWMutex   
 - [ ] sync.Cond  
 - [ ] sync.Pool  
@@ -29,10 +47,17 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 ------------- atomic --------------
 
 - [ ] atomic.CompareAndSwap  
-- [ ] atomic.Load/Store    
+- [ ] atomic.Load/Store     
+- [ ] atomic.AddInt32 
 
+
+------------- io --------------  
+
+- [ ] io.Reader/io.Wrier/io.Closer 
 
 ------------- net --------------
 
-- [ ] [net.Conn.SetDeadline(r/w)](src/net/net_deadline_annotation.md)
+
+- [ ] [netpoller](notes/net_netpoller.md) 
+- [ ] [net.Conn.SetDeadline(r/w)](notes/net_deadline_annotation.md)
  

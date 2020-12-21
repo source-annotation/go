@@ -8,7 +8,7 @@ func (fd *netFD) SetDeadline(t time.Time) error {
 }
 ```
 
-可以看出， SetDeadline 本质是给 fd 设置的。 
+可以看出， SetDeadline 本质是给这个 socket 的 fd 设置的。 
 
 但最后都是进入到 src/poll/fd_poll_runtime.go 的 `setDeadlineImpl` 方法。调用 :  
 * SetDeadline = `setDeadlineImpl(fd, t, "rw")`  
@@ -32,7 +32,17 @@ func setDeadlineImpl(fd *FD, t time.Time, mode int) error {
     defer fd.decref()
 
     ...
+    // emmmm，来到了这里，这个函数又会被编译指令 //go:linkname 给 link 到 src/runtime/netpoll.go 的 poll_runtime_pollSetDeadline 函数  
     runtime_pollSetDeadline(fd.pd.runtimeCtx, d, mode)
     return nil
 }
 ```
+
+```go
+//go:linkname poll_runtime_pollSetDeadline internal/poll.runtime_pollSetDeadline
+func poll_runtime_pollSetDeadline(pd *pollDesc, d int64, mode int) {
+	...
+}
+```
+
+
