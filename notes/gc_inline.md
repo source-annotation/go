@@ -5,7 +5,9 @@ inline 是现代编译器的常规优化手段。
 优点是：
 
 * 减少函数调用开销  
-* 编译器对内联后的 ast node 还能继续优化。 比如：编译器发现内联后还能顺手消除死代码。  
+* 编译器对内联后的 ast node 还能继续优化。 比如：
+    * 编译器发现内联后还能顺手消除死代码。  
+    * [talk: Mid-stack inlining in the Go compiler (external)](https://docs.google.com/presentation/d/1Wcblp3jpfeKwA0Y4FOmj63PW52M_qmNqlQkNaLj0P5o/edit#slide=id.g1b2157b5d1_0_6) 里举了一个例子：把循环中的不变变量计算提到外部。 
 
 ## 内联处于编译的哪个阶段 ? 
 
@@ -96,5 +98,18 @@ func (m *Mutex) Lock() {
 
 把没抢到锁的 goroutine 的下次竞争逻辑给封装成 lockSlow 方法(即 outline)。 这样做是为了让 fast path 可以被内联。
 
-这是什么道理？ dave cheney 大佬的 [Mid-stack inlining in Go](https://dave.cheney.net/2020/05/02/mid-stack-inlining-in-go) 这篇文章讲得很详细。 总结来说就是：  
+可以看一下 mid-stack inlining : 
+
+* [cmd/compile: enable mid-stack inlining #19348](https://github.com/golang/go/issues/19348)  
+* [\[Slide\] Mid-stack inlining in the Go compiler](https://docs.google.com/presentation/d/1Wcblp3jpfeKwA0Y4FOmj63PW52M_qmNqlQkNaLj0P5o/edit#slide=id.p)
+* [Proposal: Mid-stack inlining in the Go compiler](https://go.googlesource.com/proposal/+/master/design/19348-midstack-inlining.md)    
+* [Mid-stack inlining in Go](https://dave.cheney.net/2020/05/02/mid-stack-inlining-in-go)   
+
+mid-stack inlining 一般和 leaf inlining 相提并论。 一个函数里不会再调用任何函数了，那它就是 leaf(叶子节点)，否则就是 mid-stack。  
+
+
 //TODO  
+
+## 内联后 stack trace 看起来还正常吗？
+
+假如函数 `foo` 被内联了，但同时这个函数里触发了 panic，那么打印出来的 stack trace 还能看到 foo 的踪迹吗？ 
