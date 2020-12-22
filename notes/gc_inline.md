@@ -1,5 +1,12 @@
 # inline(内联)  
 
+建议先阅读： 
+
+* [cmd/compile: enable mid-stack inlining #19348](https://github.com/golang/go/issues/19348)  
+* [\[Slide\] Mid-stack inlining in the Go compiler](https://docs.google.com/presentation/d/1Wcblp3jpfeKwA0Y4FOmj63PW52M_qmNqlQkNaLj0P5o/edit#slide=id.p)
+* [Proposal: Mid-stack inlining in the Go compiler](https://go.googlesource.com/proposal/+/master/design/19348-midstack-inlining.md)    
+* [Mid-stack inlining in Go](https://dave.cheney.net/2020/05/02/mid-stack-inlining-in-go)   
+
 inline 是现代编译器的常规优化手段。 
 
 优点是：
@@ -9,15 +16,20 @@ inline 是现代编译器的常规优化手段。
     * 编译器发现内联后还能顺手消除死代码。  
     * [talk: Mid-stack inlining in the Go compiler (external)](https://docs.google.com/presentation/d/1Wcblp3jpfeKwA0Y4FOmj63PW52M_qmNqlQkNaLj0P5o/edit#slide=id.g1b2157b5d1_0_6) 里举了一个例子：把循环中的不变变量计算提到外部。 
 
+这2个优点很诱人，可以把所有函数内联吗？  不能，内联会增加编译时间和 binary 体积。 试想如果你用 Go 去编译 wasm，你能接受一个输出 hello world 的 wasm 几十 MB 吗？ 
+
+
 ## 内联处于编译的哪个阶段 ? 
 
 仅 go compiler 而言。
 
 ## 可内联与不可内联
 
-如何判断一个函数能否被内联？ 可以直接阅读 src/cmd/compile/internal/gc/inl.go 中的 `func caninl(fn *Node)`。
+执行  `go tool compile -m=2 xxx.go` 命令来编译，就会输出哪些函数可内联，哪些不可内联，以及对应的原因。非常直观。   
 
-当我们使用 `go tool compile -m=2 xxx.go` 来编译时，会输出哪些函数可内联，哪些不可内联，以及对应的原因。非常直观。   
+
+能否内联的判断在 src/cmd/compile/internal/gc/inl.go 中的 `func caninl(fn *Node)` 方法。
+
 
 `caninl` 这个函数根据一个 func 的 ast node 来判断这个 func 能否被内联。它是非黑即白的。即，排除掉无法被内联的，剩下的都是可以内联的。 所以我们只要研究哪些情况无法内联即可。
 

@@ -26,8 +26,13 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 
 ------------- gc(go compiler) --------------    
 
+- [ ] [ast(抽象语法树)](notes/gc_ast.md)
 - [ ] [inline(内联)](notes/gc_inline.md) 
-- [ ] [typecheck(类型检查)](notes/gc_inline.md) 
+- [ ] [typecheck(类型检查)](notes/gc_inline.md)  
+- [ ] [ssa(静态单赋值)](notes/gc_ssa.md)  
+- [ ] [死代码消除](notes/gc_deadcode.md) 
+- [ ] [dwarf 相关](notes/gc_dwarf.md)  
+- [ ] [linker:静态链接/动态链接](notes/gc_linker.md)  
 
 ------------- sync --------------
 
