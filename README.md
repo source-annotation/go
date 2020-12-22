@@ -14,7 +14,7 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 
 - [ ] make  
 - [ ] new  
-- [ ] len   
+- [ ] [len](notes/builtin_len.md)   
 - [ ] cap  
 - [ ] append   
 - [ ] panic   
