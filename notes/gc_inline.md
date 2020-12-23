@@ -1,6 +1,6 @@
 # inline(内联)  
 
-建议先阅读： 
+请先阅读： 
 
 * [cmd/compile: enable mid-stack inlining #19348](https://github.com/golang/go/issues/19348)  
 * [\[Slide\] Mid-stack inlining in the Go compiler](https://docs.google.com/presentation/d/1Wcblp3jpfeKwA0Y4FOmj63PW52M_qmNqlQkNaLj0P5o/edit#slide=id.p)

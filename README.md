@@ -10,6 +10,15 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 # Sched   
 
 按需阅读。   
+
+------------- datatypes --------------  
+
+- [ ] map  
+- [ ] slice 
+- [ ] [channel](notes/datatype_channel.md)  
+- [ ] interface  
+- [ ] func 
+     
 ------------- builtin --------------   
 
 - [ ] make  
@@ -18,11 +27,16 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 - [ ] cap  
 - [ ] append   
 - [ ] panic   
-- [ ] defer   
 - [ ] recover  
 - [ ] copy  
 - [ ] delete  
-- [ ] print   
+- [ ] print
+
+------------- other --------------  
+
+- [ ] select  
+- [ ] defer  
+- [ ] [gmp](notes/other_gmp.md)
 
 ------------- gc(go compiler) --------------    
 
