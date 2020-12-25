@@ -21,8 +21,10 @@ go version : 1.13.9
 - [ ] slice 
 - [ ] [channel](notes/datatype_channel.md)  
 - [ ] interface  
+- [ ] string
 - [ ] func 
-     
+- [ ] [arbitrary type](notes/datatype_arbitrary.md) 
+
 ------------- builtin --------------   
 
 - [ ] make  
