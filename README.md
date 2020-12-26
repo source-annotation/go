@@ -11,6 +11,8 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 
 按需阅读。   
 
+[Go 源码的组织结构](notes/gosrc_structure.md)
+
 ------------- datatypes --------------  
 
 - [ ] map  
@@ -35,8 +37,9 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 ------------- other --------------  
 
 - [ ] select  
-- [ ] defer  
-- [ ] [gmp](notes/other_gmp.md)
+- [ ] defer   
+- [ ] [go scheduler(调度器)](notes/other_scheduler.md)
+- [ ] [GMP](notes/other_gmp.md)
 
 ------------- gc(go compiler) --------------    
 
@@ -59,8 +62,10 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 
 ------------- runtime --------------
 - [ ] runtime.GC()  
-- [ ] runtime.GOMAXPROCS()  
+- [ ] [runtime.GOMAXPROCS()](notes/runtime_gomaxprocs.md)  
 - [ ] runtime.lfstack 
+- [ ] runtime.Gosched()  
+- [ ] [runtime.osinit()](notes/runtime_osinit.md)
 
 
 ------------- atomic --------------

@@ -4,7 +4,10 @@
 
 package runtime
 
-import "unsafe"
+import (
+	"std/sync/atomic"
+	"unsafe"
+)
 
 // Should be a built-in for unsafe.Pointer?
 //go:nosplit
