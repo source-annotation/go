@@ -4,6 +4,8 @@
 Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是这个 repo 的镜像。   
 
 
+go version : 1.13.9 
+
 [rf]: https://reneefrench.blogspot.com/
 [cc3-by]: https://creativecommons.org/licenses/by/3.0/
 
@@ -30,7 +32,7 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 - [ ] append   
 - [ ] panic   
 - [ ] recover  
-- [ ] copy  
+- [ ] [copy](notes/builtin_copy.md)  
 - [ ] delete  
 - [ ] print
 
@@ -39,7 +41,8 @@ Go 语言 Git repo : https://go.googlesource.com/go ，Github 上的 repo 只是
 - [ ] select  
 - [ ] defer   
 - [ ] [go scheduler(调度器)](notes/other_scheduler.md)
-- [ ] [GMP](notes/other_gmp.md)
+- [ ] [GMP](notes/other_gmp.md)  
+- [ ] [Write barrier](notes/other_barrier.md)
 
 ------------- gc(go compiler) --------------    
 
