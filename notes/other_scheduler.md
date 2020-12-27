@@ -1,5 +1,10 @@
 # Goroutine scheduler  
 
+Go 里所有的代码都在 goroutine中执行(包括 main.main) ，Goroutine 的调度属于 go runtime 的工作。  
+
+推荐学习资料： 
+
+* https://speakerdeck.com/retervision/go-runtime-scheduler   
 
 ## 调度器的初始化  
 
