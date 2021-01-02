@@ -11,9 +11,7 @@ go version : 1.13.9
 
 # Sched   
 
-按需阅读。   
-
-[Go 源码的组织结构](notes/gosrc_structure.md)
+[Go 源码阅读指北](notes/gosrc_structure.md)
 
 ------------- datatypes --------------  
 
@@ -21,8 +19,10 @@ go version : 1.13.9
 - [ ] slice 
 - [ ] [channel](notes/datatype_channel.md)  
 - [ ] interface  
+- [ ] string
 - [ ] func 
-     
+- [ ] [arbitrary type](notes/datatype_arbitrary.md) 
+
 ------------- builtin --------------   
 
 - [ ] make  
@@ -67,8 +67,9 @@ go version : 1.13.9
 - [ ] runtime.GC()  
 - [ ] [runtime.GOMAXPROCS()](notes/runtime_gomaxprocs.md)  
 - [ ] runtime.lfstack 
-- [ ] runtime.Gosched()  
-- [ ] [runtime.osinit()](notes/runtime_osinit.md)
+- [ ] [runtime.Gosched()](notes/runtime_gosched.md)  
+- [ ] [runtime.osinit()](notes/runtime_osinit.md)  
+- [ ] [死锁检查 : runtime.checkdead()](notes/runtime_checkdead.md)
 
 
 ------------- atomic --------------
