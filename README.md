@@ -80,11 +80,16 @@ go version : 1.13.9
 
 ------------- io --------------  
 
-- [ ] io.Reader/io.Wrier/io.Closer 
+- [ ] io.Reader/io.Wrier/io.Closer  
+
+------------- bufio --------------  
+
+//TODO gopush 解析 tcp 字节流，就是用 bufio
 
 ------------- net --------------
 
 
 - [ ] [netpoller](notes/net_netpoller.md) 
-- [ ] [net.Conn.SetDeadline(r/w)](notes/net_deadline_annotation.md)
+- [ ] [net.Conn.SetDeadline(Read/Write)](notes/net_deadline_annotation.md)   
+- [x] [nagle 算法：net.TCPConn.SetNodelay()](notes/net_tcp_nagle.md)
  
