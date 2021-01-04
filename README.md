@@ -34,15 +34,9 @@ go version : 1.13.9
 - [ ] recover  
 - [ ] [copy](notes/builtin_copy.md)  
 - [ ] delete  
-- [ ] print
+- [ ] print 
 
-------------- other --------------  
 
-- [ ] select  
-- [ ] defer   
-- [ ] [go scheduler(调度器)](notes/other_scheduler.md)
-- [ ] [GMP](notes/other_gmp.md)  
-- [ ] [Write barrier](notes/other_barrier.md)
 
 ------------- gc(go compiler) --------------    
 
@@ -81,7 +75,10 @@ go version : 1.13.9
 
 ------------- io --------------  
 
-- [ ] io.Reader/io.Wrier/io.Closer  
+- [ ] io.Reader  
+- [ ] io.Reader.Read()   
+- [ ] io.Wrier 
+- [ ] io.Closer  
 
 ------------- bufio --------------  
 
@@ -91,6 +88,16 @@ go version : 1.13.9
 
 
 - [ ] [netpoller](notes/net_netpoller.md) 
-- [ ] [net.Conn.SetDeadline(Read/Write)](notes/net_deadline_annotation.md)   
-- [x] [nagle 算法：net.TCPConn.SetNodelay()](notes/net_tcp_nagle.md)
+- [ ] [net.Conn.SetDeadline(Read/Write)](notes/net_deadline_annotation.md)
+- [x] [net.Conn.Read()](notes/net_conn_read.md)   
+- [x] [nagle 算法：net.TCPConn.SetNodelay()](notes/net_tcp_nagle.md)  
  
+ 
+------------- 待分类 --------------  
+
+- [x] [syscall](notes/syscall.md)  
+- [ ] select  
+- [ ] defer   
+- [ ] [go scheduler(调度器)](notes/other_scheduler.md)
+- [ ] [GMP](notes/other_gmp.md)  
+- [ ] [Write barrier](notes/other_barrier.md)

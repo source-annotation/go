@@ -107,3 +107,14 @@ type sudog struct {}
 runtime.Gosched() 会让当前所在 g 放弃 cpu(强行让出cpu)，与 park 不同的是 Gosched() 会把当前所在 g 放入全局队列使之处于 runnable 状态。  
 
 parking/noparking
+
+
+## Syscall 
+
+系统调用时，可能会阻塞。 所以 Go 中有2种系统调用函数：`Syscall()` 和 `RawSyscall()`。
+
+`Syscall()` 在真正地去调用系统函数之前会先调用 `runtime.entersyscall`，好让这次系统调用可以被 go 的调度器调度。若此时 `Syscall()` 阻塞了，调度器会判断要不要把这个 M 上的 P 挪给其他的 M。
+
+`RawSyscall()` 只是为了在执行那些一定不会阻塞的系统调用时，能节省两次对 runtime 的函数调用消耗。
+
+这部分看曹大的 [Go 系列文章6: syscall](https://xargin.com/syscall/) 就够了。 
