@@ -57,11 +57,11 @@ go version : 1.13.9
 - [ ] sync.Pool  
 - [ ] sync.Map 
 
-------------- runtime --------------
-- [ ] runtime.GC()  
+------------- runtime --------------   
+- [ ] [runtime.GC()]()  
 - [ ] [runtime.GOMAXPROCS()](notes/runtime_gomaxprocs.md)  
 - [ ] runtime.lfstack 
-- [ ] [runtime.Gosched()](notes/runtime_gosched.md)  
+- [x] [runtime.Gosched()](notes/runtime_gosched.md)  
 - [ ] [runtime.osinit()](notes/runtime_osinit.md)  
 - [ ] [死锁检查 : runtime.checkdead()](notes/runtime_checkdead.md)
 
@@ -92,12 +92,18 @@ go version : 1.13.9
 - [x] [net.Conn.Read()](notes/net_conn_read.md)   
 - [x] [nagle 算法：net.TCPConn.SetNodelay()](notes/net_tcp_nagle.md)  
  
- 
+ ------------- pragmas --------------  
+
+- [ ] [write barrier(写屏障)](notes/other_barrier.md)  
+- [ ] [nosplit]()  
+- [ ] [noinline]()
+
 ------------- 待分类 --------------  
 
 - [x] [syscall](notes/syscall.md)  
 - [ ] select  
 - [ ] defer   
 - [ ] [go scheduler(调度器)](notes/other_scheduler.md)
-- [ ] [GMP](notes/other_gmp.md)  
-- [ ] [Write barrier](notes/other_barrier.md)
+- [ ] [gmp](notes/other_gmp.md) 
+- [ ] [GC]()
+  
