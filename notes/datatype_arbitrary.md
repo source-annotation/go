@@ -6,5 +6,4 @@ src/unsafe/unsafe.go
 // part of the unsafe package. It represents the type of an arbitrary Go expression.
 type ArbitraryType int
 ```
-
-只是 unsafe 中用于文档需求..   
+仅在 unsafe 包中用于文档需求.. 实际上没有这个类型。  感觉和 `T` 一样表示 Type 。   

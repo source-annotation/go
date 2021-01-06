@@ -5,7 +5,7 @@
 |功能| func | path |   
 |---|---|---|  
 |检查死锁|runtime.checkdead() | src/runtime/proc.go |    
-|
+|调度器的一轮调度|runtime.schedule()|src/runtime/proc.go|    
 
 ### 找不到函数实现问题
 我们常用编辑器的 "转到定义" 来查看一个函数的实现。 但在 Go 源码中，经常会发现一个函数经常找不到其实现。 

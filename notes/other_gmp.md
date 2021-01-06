@@ -23,7 +23,7 @@ func findrunnable() (gp *g, inheritTime bool) {
     // todo  
     
     // Steal work from other P's.
-    // 从其的 m.p.runq 里偷 g(一次偷 p.runq 里的一半 g)，然后放入自己的 p.runq，最后返回一个 g 
+    // 从其它的 m.p.runq 里偷 g(一次偷 p.runq 里的一半 g)，然后放入自己的 p.runq，最后返回一个 g 
     runqsteal()
 }
 ```

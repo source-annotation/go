@@ -92,6 +92,10 @@ go version : 1.13.9
 - [x] [net.Conn.Read()](notes/net_conn_read.md)   
 - [x] [nagle 算法：net.TCPConn.SetNodelay()](notes/net_tcp_nagle.md)  
  
+ ------------- reflect --------------  
+ 
+ - [ ] reflect.DeepEqual()
+   
  ------------- pragmas --------------  
 
 - [ ] [write barrier(写屏障)](notes/other_barrier.md)  

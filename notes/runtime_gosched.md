@@ -74,3 +74,6 @@ func main() {
 如果不启用代码里的 `runtime.Gosched`，则 `fmt.Println("go")` 没来得及执行， main.main 就结束了。  
 如果启用了代码里的 `runtime.Gosched`，则 main 这个协程会主动让出 g 给其它的 g(也没啥其它了，就上面那个)，此时就会打印出 `go go go go go hello hello`。   
    
+# 使用案例
+
+.... tood 
