@@ -50,10 +50,10 @@ go version : 1.13.9
 
 ------------- sync --------------
 
-- [x] [sync.Once](notes/once_annotation.md)   
-- [ ] [sync.Mutex](notes/mutex_annotation.md)  
+- [x] [sync.Once](notes/sync_once.md)   
+- [ ] [sync.Mutex](notes/sync_mutex.md)  
 - [ ] sync.RWMutex   
-- [ ] sync.Cond  
+- [ ] [sync.Cond](notes/sync_cond.md)  
 - [ ] sync.Pool  
 - [ ] sync.Map 
 
@@ -77,7 +77,7 @@ go version : 1.13.9
 
 - [ ] io.Reader  
 - [ ] io.Reader.Read()   
-- [ ] io.Wrier 
+- [ ] io.Writer 
 - [ ] io.Closer  
 
 ------------- bufio --------------  
@@ -102,6 +102,11 @@ go version : 1.13.9
 - [ ] [nosplit]()  
 - [ ] [noinline]()
 
+------------- 一些汇编 --------------  
+
+- [ ] [Check alignment](notes/asm_check_alignment.md)
+
+
 ------------- 待分类 --------------  
 
 - [x] [syscall](notes/syscall.md)  
@@ -109,5 +114,6 @@ go version : 1.13.9
 - [ ] defer   
 - [ ] [go scheduler(调度器)](notes/other_scheduler.md)
 - [ ] [gmp](notes/other_gmp.md) 
-- [ ] [GC]()
+- [ ] [GC]()  
+- [ ] [noCopy](notes/other_nocopy.md)
   

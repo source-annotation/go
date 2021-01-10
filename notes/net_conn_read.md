@@ -17,6 +17,8 @@ func main() {
 
 上面的 `conn.Read(buf)` 并不保证填满 `buf` 再返回， 一次循环 `conn.Read(buf)` 执行结束后， buf 里可能有 1~1024 范围内的任意 byte 数。   
 
+这是因为 go 也不知道在底层 socket 的 buffer 里现在有多少 bytes，如果 buffer 里有超过 1024 个byte那就读 1024 个byte，如果 buffer 里不超过 1024 个 byte 那就全部读出来。 (Inspired by : smallnest/ringbuffer `RingBuffer.Read(p []byte)` )。
+
 可参考 : 
 
 * [TCP server to read an unknown number of bytes but act on it as they come](https://forum.golangbridge.org/t/tcp-server-to-read-an-unknown-number-of-bytes-but-act-on-it-as-they-come/8661)  
